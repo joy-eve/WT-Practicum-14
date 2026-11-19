@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SupplySphere Quiz</title>
+    <script src="PR14.js" defer></script>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2f3;
+        }
+
+        .quiz {
+            background: white;
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 5px solid #28566b;
+        }
+
+        .top, .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 { color: #183b4e; }
+
+        .option {
+            display: flex;
+            width: 100%;
+            margin: 10px 0;
+            padding: 0;
+            border: 1px solid #d4deeb;
+            background: #f7f9fb;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 6px;
+        }
+
+        .option span {
+            background: #28566b;
+            color: white;
+            padding: 12px;
+        }
+
+        .option p { margin: 12px; }
+        .selected { border: 2px solid #28566b; }
+
+        #next {
+            background: #28566b;
+            color: white;
+            padding: 11px 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #bar {
+            height: 7px;
+            background: #28566b;
+            width: 0%;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz">
+    <div class="top">
+        <b>SUPPLYSPHERE | KNOWLEDGE CHECK</b>
+        <b>Score: <span id="score">0</span></b>
+    </div>
+
+    <p>Question <span id="num">1</span>/4</p>
+    <div style="background:#ddd">
+        <div id="bar"></div>
+    </div>
+
+    <h2 id="question"></h2>
+    <div id="options"></div>
+
+    <hr>
+    <div class="bottom">
+        <p id="msg">Select an answer to continue.</p>
+        <button id="next" onclick="nextQuestion()">Next →</button>
+    </div>
+</div>
+</body>
+</html>
